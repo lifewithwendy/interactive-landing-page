@@ -5,7 +5,7 @@ export const StyledDiv = styled('div')(({ theme }) => ({
 backgroundImage: theme === 'light'
 ? 'url("./lightBackground.jpg")'
 : 'url("/darkBackground.avif")',
-backgroundSize: 'fit',
+backgroundSize: 'cover',
 display: 'flex',
 flexDirection: 'column',
 alignItems: 'center',
@@ -15,18 +15,19 @@ minHeight: '91vh',
 }));
 
 export const StyledH1 = styled('h1')(({ theme }) => ({
-color: theme === 'light' ? 'black' : 'white', 
+color: theme === 'light' ? '#1976d2' : 'white', 
 fontSize: '10rem',
 textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',
 marginBottom: '-10px',
 marginTop: '-10px',
-
+textAlign: 'center',
 }));
 
 export const StyledP = styled('p')(({ theme }) => ({
-color: theme === 'light' ? 'black' : 'white',
+color: theme === 'light' ? '#1976d2' : 'white',
 fontSize: '4rem',
 textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',
+textAlign: 'center',
 }));
 
 // Define the keyframes for the animation
@@ -45,10 +46,14 @@ const slideInAnimation = keyframes`
 // Styled component with animation
 export const AnimatedElement = styled.div`
   animation: ${slideInAnimation} 1s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 `;
 
 export const StyledTime = styled('h2')(({ theme }) => ({
-    color: theme === 'light' ? 'black' : 'white', 
+    color: theme === 'light' ? '#1976d2' : 'white', 
     position: 'fixed',
     bottom: '10px',
     right: '20px',
@@ -60,10 +65,11 @@ export const StyledTime = styled('h2')(({ theme }) => ({
     }));
 
 export const StyledTopic = styled('h1')(({ theme }) => ({
-    color: theme === 'light' ? 'black' : 'white', 
+    color: theme === 'light' ? '#1976d2' : 'white', 
     fontSize: '5rem',
     textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',
     margin: '0 -15px 0 -15px',
+    textAlign: 'center',
     }));
 
 export const StyleSec = styled('section')(({ theme }) => ({
@@ -75,15 +81,16 @@ export const StyleSec = styled('section')(({ theme }) => ({
     }));
 
 export const StyledButton = styled('button')(({ theme }) => ({
-    backgroundColor: theme === 'light' ? 'black' : 'white',
-    color: theme === 'light' ? 'white' : 'black',
+    backgroundColor: theme === 'light' ? '#1976d2' : 'white',
+    color: theme === 'light' ? 'red' : '#black',
     padding: '10px 20px',
     fontSize: '1.5rem',
     border: 'none',
-    borderRadius: '5px',
+    borderRadius: '10px',
     cursor: 'pointer',
     boxShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',
     '&:hover': {
       backgroundColor: theme === 'light' ? 'gray' : 'lightgray',
-    }
+    },
+    alignSelf: 'center',
     }));

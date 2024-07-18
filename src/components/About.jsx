@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { ThemeContext } from '../contexts/ThemeContext';
 import { StyledDiv, StyledTopic } from '../styles';
 import { NavLink, Outlet } from 'react-router-dom';
@@ -6,6 +6,11 @@ import { Box, Button, Stack } from '@mui/material';
 
 const About = () => {
   const { theme } = useContext(ThemeContext);
+
+  useEffect(() => {
+    document.title = 'About';
+    console.log('About component mounted');	
+  },[])
 
   const navLinkStyles = {
     width: '100px',

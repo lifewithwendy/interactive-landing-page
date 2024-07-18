@@ -6,10 +6,10 @@ export const Clock = ({theme}) => {
   
 
   useEffect(() => {
+    console.log('Clock component mounted');
     const intervalId = setInterval(() => {
       setCurrentTime(new Date()); // Update current time every second
     }, 1000);
-
     // Cleanup function
     return () => {
       clearInterval(intervalId); // Clear interval on component unmount or dependency change
@@ -17,6 +17,6 @@ export const Clock = ({theme}) => {
   }, []); // No dependencies, runs only once on mount
 
   return (
-      <StyledTime theme={theme}>Current Time: {currentTime.toLocaleTimeString()}</StyledTime>
+      <StyledTime theme={theme}>{currentTime.toLocaleTimeString()}</StyledTime>
   );
 };
