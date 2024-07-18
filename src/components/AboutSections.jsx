@@ -57,12 +57,12 @@ const Team = () => {
   const { theme } = useContext(ThemeContext);
 
   const h2Style = { 
-    color: theme === "light" ? "#008AE0" : "white" , 
+    color: theme === "light" ? "#008AE0" : "black" , 
     marginTop: '-20px'
   };
 
   const pStyle = { 
-    color: theme === "light" ? "#008AE0" : "white" 
+    color: theme === "light" ? "#008AE0" : "black" 
   };
 
   useEffect(() => {
@@ -82,12 +82,12 @@ const Values = () => {
   const { theme } = useContext(ThemeContext);
 
   const h2Style = { 
-    color: theme === "light" ? "#008AE0" : "white" , 
+    color: theme === "light" ? "#008AE0" : "black" , 
     marginTop: '-20px'
   };
 
   const pStyle = { 
-    color: theme === "light" ? "#008AE0" : "white" 
+    color: theme === "light" ? "#008AE0" : "black" 
   };
 
   useEffect(() => {
