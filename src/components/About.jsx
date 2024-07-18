@@ -13,9 +13,9 @@ const About = () => {
   },[])
 
   const navLinkStyles = {
-    width: '100px',
+    width: '200px',
     textDecoration: 'none',
-    color: theme === 'light' ? 'black' : 'white',
+    color: theme === 'light' ? '#ff000' : 'white',
     padding: '10px 20px',
     borderRadius: '5px',
     '&.active-link': {
@@ -55,7 +55,9 @@ const About = () => {
           </Button>
         </Stack>
       </Box>
-      <Outlet />
+      <div >
+        <Outlet />
+      </div>
     </StyledDiv>
   );
 };

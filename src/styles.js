@@ -1,16 +1,18 @@
 import styled from '@emotion/styled';
 import { keyframes } from '@emotion/react';
 
+
 export const StyledDiv = styled('div')(({ theme }) => ({
-backgroundImage: theme === 'light'
-? 'url("./lightBackground.jpg")'
-: 'url("/darkBackground.avif")',
-backgroundSize: 'cover',
-display: 'flex',
-flexDirection: 'column',
-alignItems: 'center',
-justifyContent: 'space-evenly',
-minHeight: '91vh',
+  backgroundImage: theme === 'light'
+  ? 'url("./lightBackground.jpg")'
+  : 'url("/darkBackground.avif")',
+  backgroundSize: 'cover',
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  justifyContent: 'space-evenly',
+  minHeight: '92vh',
+  marginBottom: '0px',
 // paddingTop: '150px',
 }));
 
@@ -28,6 +30,7 @@ color: theme === 'light' ? '#1976d2' : 'white',
 fontSize: '4rem',
 textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',
 textAlign: 'center',
+height : '20%'
 }));
 
 // Define the keyframes for the animation
@@ -68,8 +71,9 @@ export const StyledTopic = styled('h1')(({ theme }) => ({
     color: theme === 'light' ? '#1976d2' : 'white', 
     fontSize: '5rem',
     textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',
-    margin: '0 -15px 0 -15px',
+    margin: '0 -10px 0 -10px',
     textAlign: 'center',
+    height: '20%',
     }));
 
 export const StyleSec = styled('section')(({ theme }) => ({
@@ -78,19 +82,20 @@ export const StyleSec = styled('section')(({ theme }) => ({
     alignItems: 'center',
     justifyContent: 'center',
     height: '70vh',
+    width : '100%'
     }));
 
 export const StyledButton = styled('button')(({ theme }) => ({
     backgroundColor: theme === 'light' ? '#1976d2' : 'white',
-    color: theme === 'light' ? 'red' : '#black',
+    color: theme === 'light' ? 'white' : 'black' ,
     padding: '10px 20px',
     fontSize: '1.5rem',
     border: 'none',
-    borderRadius: '10px',
+    borderRadius: '8px',
     cursor: 'pointer',
-    boxShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',
+    // boxShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',
     '&:hover': {
-      backgroundColor: theme === 'light' ? 'gray' : 'lightgray',
+      backgroundColor: theme === 'light' ? '#92B3D3' : 'lightgray',
     },
     alignSelf: 'center',
     }));

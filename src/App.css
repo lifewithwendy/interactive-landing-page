@@ -1,5 +1,10 @@
 .active-link {
+  margin: 0 10px;
     font-weight: bold;
     text-decoration: underline;
+  }
+  body{
+    margin: 0px;
+    height: 100%;
   }
   

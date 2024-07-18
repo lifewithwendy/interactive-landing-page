@@ -42,6 +42,7 @@ const Home = () => {
   }
 
   return (
+    <div style={{height : '100%'}}>
     <StyledDiv theme={theme}>
       <AnimatedElement>
       <StyledH1 theme={theme}>{welcomeMessage}</StyledH1>
@@ -61,26 +62,27 @@ const Home = () => {
               '& .MuiOutlinedInput-root': {
                 color: theme === 'light' ? '#000' : 'black',
                 '& fieldset': {
-                  borderColor: theme === 'light' ? '#000' : 'black',
+                  borderColor: theme === 'light' ? 'blue' : 'black',
                 },
                 '&:hover fieldset': {
-                  borderColor: theme === 'light' ? '#000' : 'black',
+                  borderColor: theme === 'light' ? '#3C84CD' : 'black',
                 },
                 '&.Mui-focused fieldset': {
-                  borderColor: theme === 'light' ? '#000' : 'black',
+                  borderColor: theme === 'light' ? 'blue' : 'black',
                 },
               },
               '& .MuiInputLabel-root': {
-                color: theme === 'light' ? '#000' : 'black',
+                color: theme === 'light' ? 'blue' : 'black',
               },
             }}
           />
-        <StyledButton>Click me!</StyledButton>
+        <StyledButton theme={theme}>Click me!</StyledButton>
         </Box>
       </div>
       </AnimatedElement>
       <Clock theme={theme}/>
     </StyledDiv>
+    </div>
   );
 };
 
