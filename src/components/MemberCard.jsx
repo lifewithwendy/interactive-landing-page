@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card as MuiCard, CardMedia, CardContent, Typography,  } from '@mui/material';
+import { Card as MuiCard, CardMedia, CardContent, Typography } from '@mui/material';
 
 export function Card({ name, role, profilePicture, theme }) {
   return (
@@ -13,7 +13,7 @@ export function Card({ name, role, profilePicture, theme }) {
     >
       <CardMedia
         sx={{ 
-          height: 140,
+          height: 230, 
         }}
         image={profilePicture}
         title={name}

@@ -9,13 +9,13 @@ const About = () => {
 
   useEffect(() => {
     document.title = 'About';
-    console.log('About component mounted');	
+    console.log('About component mounted');  
   },[])
 
   const navLinkStyles = {
     width: '200px',
     textDecoration: 'none',
-    color: theme === 'light' ? '#ff000' : 'white',
+    color: theme === 'light' ? '#008AE0' : 'white',
     padding: '10px 20px',
     borderRadius: '5px',
     '&.active-link': {
@@ -27,11 +27,26 @@ const About = () => {
     },
   };
 
+  const formContainerStyle = {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    gap: '20px',
+    maxWidth: '800px',
+    width: '100%',
+    margin: '0 auto',
+    padding: '20px',
+    height: '450px', // Adjusted height to 500px
+    backgroundColor: theme === 'light' ? 'rgba(255, 255, 255, 0.8)' : 'rgba(255, 255, 255, 0.7)',
+    borderRadius: '10px',
+    boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)',
+  };
+
   return (
     <StyledDiv theme={theme}>
       <StyledTopic theme={theme}>About Us</StyledTopic>
       <Box component="nav" sx={{ marginBottom: '20px' }}>
-        <Stack direction="row" spacing={10} justifyContent="center">
+        <Stack direction="row" spacing={4} justifyContent="center">
           <Button
             component={NavLink}
             to="history"
@@ -55,8 +70,13 @@ const About = () => {
           </Button>
         </Stack>
       </Box>
-      <div >
-        <Outlet />
+      <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
+        <Box
+          component="div"
+          sx={formContainerStyle}
+        >
+          <Outlet />
+        </Box>
       </div>
     </StyledDiv>
   );

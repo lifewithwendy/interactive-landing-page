@@ -70,7 +70,7 @@ const Team = () => {
   }, []);
 
   return (
-    <StyleSec theme={theme} id="team">
+    <StyleSec theme={theme} id="team" xs={{width: '100%'}}>
       <h2 style={h2Style}>Team</h2>
       <p style={pStyle}>Meet our team...</p>
       <MemberCard theme={theme} />
