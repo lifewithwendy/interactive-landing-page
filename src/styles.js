@@ -4,7 +4,7 @@ import { keyframes } from '@emotion/react';
 
 export const StyledDiv = styled('div')(({ theme }) => ({
   backgroundImage: theme === 'light'
-  ? 'url("./lightBackground.jpg")'
+  ? 'url("/lightBackground.jpg")'
   : 'url("/darkBackground.avif")',
   backgroundSize: 'cover',
   display: 'flex',
