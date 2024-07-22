@@ -17,6 +17,6 @@ export const Clock = ({theme}) => {
   }, []); // No dependencies, runs only once on mount
 
   return (
-      <StyledTime theme={theme}>{currentTime.toLocaleTimeString()}</StyledTime>
+      <StyledTime theme={theme}>{currentTime.toLocaleTimeString('en-US', { hour12: false })}</StyledTime>
   );
 };
