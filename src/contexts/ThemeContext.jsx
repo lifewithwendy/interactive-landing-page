@@ -22,12 +22,18 @@ export const ThemeProvider = ({ children }) => {
   };
 
   useEffect(() => {
-    const localTheme = localStorage.getItem('theme');
-    if (localTheme) {
-      setTheme(JSON.parse(localTheme));
-    } else {
-      setTheme(lightOrDark());
-    }
+    // This effect ensures the theme is consistent if localStorage is manually changed outside the app
+    const handleStorageChange = () => {
+      const localTheme = localStorage.getItem('theme');
+      if (localTheme) {
+        setTheme(JSON.parse(localTheme));
+      }
+    };
+
+    window.addEventListener('storage', handleStorageChange);
+    return () => {
+      window.removeEventListener('storage', handleStorageChange);
+    };
   }, []);
 
   return (
